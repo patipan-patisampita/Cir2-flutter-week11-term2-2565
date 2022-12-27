@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+class Menu{
+  final String? title;
+  final IconData? icon;
+  final Color? bkColor;
+
+  const Menu({this.title, this.icon, this.bkColor});
+}
+
+List<Menu> menus = [
+  const Menu(title:'MENU-1', icon:Icons.person, bkColor:Colors.orangeAccent)
+];
+
 class GridViewCardPage extends StatelessWidget {
   const GridViewCardPage({Key? key}) : super(key: key);
 
