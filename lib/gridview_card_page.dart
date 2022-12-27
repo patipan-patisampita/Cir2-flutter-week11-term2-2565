@@ -9,7 +9,11 @@ class Menu{
 }
 
 List<Menu> menus = [
-  const Menu(title:'MENU-1', icon:Icons.person, bkColor:Colors.orangeAccent)
+  const Menu(title:'MENU-1', icon:Icons.person, bkColor:Colors.orangeAccent),
+  const Menu(title:'MENU-2', icon:Icons.wifi, bkColor:Colors.green),
+  const Menu(title:'MENU-3', icon:Icons.history_edu, bkColor:Colors.purple),
+  const Menu(title:'MENU-4', icon:Icons.cabin, bkColor:Colors.blue),
+  const Menu(title:'MENU-5', icon:Icons.catching_pokemon, bkColor:Colors.red),
 ];
 
 class GridViewCardPage extends StatelessWidget {
@@ -27,9 +31,9 @@ class GridViewCardPage extends StatelessWidget {
           crossAxisCount: 3,
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,
-          children: List.generate(6, (index) {
+          children: List.generate(menus.length, (index) {
             return Card(
-              color: Colors.orangeAccent,
+              color: menus[index].bkColor,
               elevation: 10,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
@@ -43,8 +47,8 @@ class GridViewCardPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.person,size: 62,color: Colors.white),
-                    Text("MENU-1",style: TextStyle(color: Colors.white))
+                    Icon(menus[index].icon,size: 62,color: Colors.white),
+                    Text(menus[index].title!,style: TextStyle(color: Colors.white))
                   ],
                 ),
                 onTap: (){},
