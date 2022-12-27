@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'gridview_card_page.dart';
 import 'gridview_page.dart';
 import 'home.dart';
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: GridViewPage(),
+      home: GridViewCardPage(),
     );
   }
 }
